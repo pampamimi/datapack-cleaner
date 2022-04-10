@@ -33,9 +33,13 @@ function loop(directoryPath) {
                         if (err) sendErr(err)
 
                         const qualified = []
+                        
                         content.split(/\r?\n/).forEach(line => {
+                            
                             if(line.startsWith("#") || !line) return
+                            
                             qualified.push(line)
+                            
                         })
 
                         writeFile(directoryPath + fileOrFolder, qualified.join("\n"), err => {
