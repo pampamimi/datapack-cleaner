@@ -6,8 +6,6 @@ function sendErr(err) {
 
     console.log("Error has occured, please contact Varnilla#2065 on Discord. Send this error message below!\n\n" + err.message)
 
-    process.exit(0)
-
 }
 
 function loop(directoryPath) {
