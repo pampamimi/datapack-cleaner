@@ -57,4 +57,4 @@ function loop(directoryPath) {
     })
 }
 
-loop("../")
+loop("./")
