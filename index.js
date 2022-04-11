@@ -25,10 +25,10 @@ function loop(directoryPath) {
                 else if (fileOrFolder.endsWith(".mcfunction")) {
 
                     readFile(directoryPath + fileOrFolder, { encoding: 'utf-8' }, (err, content) => {
+                        
+                        if (err) sendErr(err)
 
                         if (content.length == 0) return console.log(`Removed 0 lines from ${fileOrFolder} because its empty`)
-
-                        if (err) sendErr(err)
 
                         const qualified = []
                         
